@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Seatwork 2</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<style type="text/css">
+	body{
+		background-color: #9EB7B1;
+	}
+	#cal{
+		width: 700px;
+		padding-right: 60px;
+		
+	}
+	.border{	
+		border: dotted;
+		padding: 5px;
+		
+
+	}
+</style>
+</head>
+
+<body>
+<br>
+	<img align="right" id="cal" src="https://images.vexels.com/media/users/3/256358/isolated/preview/f8960d9092fff07c5965844c58734004-playful-calculator-cartoon.png">
+
+<div class="row" style="padding-left: 50px;">
+	<div class="border">
+	<h2>Hi, my name is Aang! I'm here to give you a Math challenge!</h2>
+	<br><br>
+	<h4>Given:</h4>
+	<br><br>
+	<h6>Enter a value for x:</h6> <input type="number" id="box1">
+	<br><br>
+	<h6>Enter a value for y:</h6> <input type="number" id="box2">
+	<br><br>
+	<button class="btn btn-primary" type="Submit" onclick="popup()">! </button>
+</div>
+
+
+
+<div class="row" style="padding-left: 50px;">
+	<div class="operations">
+		<br><br>
+
+	<button class="btn btn-success" type="Submit" onclick="addition()"> The sum of x and y </button>
+	<button class="btn btn-warning" type="Submit" onclick="square()">x raised to y</button>
+	<button class="btn btn-primary" type="Submit" onclick="greater()">Is x greater than y </button>
+	<button class="btn btn-danger" type="Submit" onclick="logic()">Is x equal to y </button>
+
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	function popup() {
+		window.alert("Let's go!");
+
+}
+
+	function addition() {
+		let num1=document.getElementById("box1").value;
+		let num2=document.getElementById("box2").value;
+		let sum= Number(num1) + Number(num2);
+	window.alert("The sum is " + sum)
+}
+
+	function square() {
+		let num1=document.getElementById("box1").value;
+		let num2=document.getElementById("box2").value;
+		let square= Number(num1) ** Number(num2);
+	window.alert("The square is " + square)
+}
+
+	function greater() {
+		let num1=document.getElementById("box1").value;
+		let num2=document.getElementById("box2").value;
+		let ans= Number(num1) > Number(num2);
+		window.alert(ans)
+}
+
+	function logic() {
+		var num1=document.getElementById("box1").value;
+		let num2=document.getElementById("box2").value;
+		let ans= Number(num1) == Number(num2);
+		window.alert(ans)
+}
+</script>
+</body>
+</html>
